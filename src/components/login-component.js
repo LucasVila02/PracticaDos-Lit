@@ -42,7 +42,7 @@ export class LoginComponent extends AuthMixin(LitElement) {
             
 
             //disparo evento
-            this.dispatchCustomEvent('login-sucess', {
+            this.dispatchCustomEvent('login-success', {
                 email: this.email, 
             } )
             //reinicio variables

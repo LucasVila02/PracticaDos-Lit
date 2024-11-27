@@ -31,12 +31,12 @@ export class LoginPage extends LitElement {
         `
     ];
 
-    handleLoginSucess(){
-        this.alertType = 'sucess'
+    handleLoginSuccess(){
+        this.alertType = 'success'
         this.alertMessage= 'Inicio de sesin exitoso!';
     }
 
-    handleErrorSucess(){
+    handleErrorSuccess(){
         this.alertType = 'error';
         this.alertMessage = 'Usuario / Contraseña Incorrectos'
     }
@@ -44,13 +44,13 @@ export class LoginPage extends LitElement {
 
     connectedCallback(){
         super.connectedCallback();
-        this.addEventListener('login-sucess', this.handleLoginSucess.bind(this));
-        this.addEventListener('login-error', this.handleErrorSucess.bind(this));
+        this.addEventListener('login-success', this.handleLoginSuccess.bind(this));
+        this.addEventListener('login-error', this.handleErrorSuccess.bind(this));
     }
 
     disconnectedCallback(){
-        this.removeEventListener('login-sucess', this.handleLoginSucess.bind(this));
-        this.removeEventListener('login-error', this.handleErrorSucess.bind(this));
+        this.removeEventListener('login-success', this.handleLoginSuccess.bind(this));
+        this.removeEventListener('login-error', this.handleErrorSuccess.bind(this));
         super.disconnectedCallback();
     }
     render() {
